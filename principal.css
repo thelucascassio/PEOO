@@ -1,0 +1,41 @@
+div#container{ /* o símbolo de jogo da velha faz a associação com o atributo id */
+    max-width: 70em;
+    /* o atributo de max-width definirá até que largura a seção poderá ocupar */
+    margin: 0 auto;
+    background-color: #f2f2f2;
+    padding: 2em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/* section div -  formata todas as divs que estão dentro da section */
+/* section, div - aplica para section e para a div */
+/* section > div - formata apenas a div que É FILHA DIRETA DA SECTION */
+/* section + div - formata a div DEPOIS DA SECTION, a irmã da section */
+
+section > div{
+    display: flex;
+    background-color: darkseagreen;
+    padding: 2em;
+    /* estrutura aninhada */
+    /*nova função do CSS div{
+        border: 1px solid #fff;
+        margin: 1em;
+        padding: 1em;
+        border-radius: 2em;
+    }*/
+}
+section > div > div{
+        border: 1px solid #fff;
+        margin: 1em;
+        padding: 1em;
+        border-radius: 2em;
+        box-shadow: 0 0 0.2em rgb(53, 87, 53); /*primeiro valor: deslocamento x, segundo: eixo y, terceiro: o desfoque da sombra, 
+        quanto maior o número, maior o desfoque. depis, a cor */
+}
+section + div{
+    background-color: lightseagreen;
+    width: 5em;
+}
+span{ /* marca os caracteres dessa área */
+    background-color: lightseagreen;
+    /* não aceita o atributo de largura, por ter uma característica inline */
+}
