@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+form{
+    max-width: 50em;
+    margin: 1em auto;
+    background-color: #f2f2f2;
+    padding: 2em;
+    border-radius: 0.5em;
+    box-shadow: 0 0 0.3em rgb(184, 184, 184);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+label{
+    display: inline-block;
+    width: 15em;
+    margin-bottom: 1em;
+}
+input[type='image']{
+    vertical-align: middle; 
+    /* alinhará a imagem ao centro do input */
+    border: 0;
+    margin: 0;
+}
+input{
+    border: 1px solid black;
+    border-radius: 0.55em;
+    padding: 0.5em;
+}
+input[type='submit']{
+    border-radius: 0.55em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
