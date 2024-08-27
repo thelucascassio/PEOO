@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flex/Grid</title>
+    <style>
+        main{
+            margin: 0 auto;
+            width: 70em;
+            background-color: cadetblue;
+            display: grid;
+            gap: 2em; /* espaço entre as células - só pode utilizar quando colocamos display grid ou flex */
+            grid-template-columns: 20% 10% 70%;
+            /* grid-template-columns: 1fr 2fr 1fr; - pega a largura definida e divide por 4 - 1 fração pra primeira parte, 2 pra do meio e 1 pra final */
+            grid-template-rows: 10em 20em 10em; /* a altura das linhas */
+            grid-template-areas: 
+            "a c d"
+            "b c d"
+            "e e e"; /* dentro das aspas cria-se a matriz. A variável que se repete não fica mesclada */
+            /* espaço vazio - "Pontinho" - . */
+            /* não pode fazer o L - colocar uma variável abaixo da outra para não bugar o sistema */
+            /* "a b c"
+               "c b c" - errado*/
+        }
+        main div{
+            border: 1px solid white;
+            padding: 2em;
+            overflow: auto; /* deixa a barra de rolagem automática */
+        }
+        div.area-a{grid-area: a; /* criação da variável da grid para criação da matriz da linha 15*/}
+        div.area-b{grid-area: b;}
+        div.area-c{grid-area: c;}
+        div.area-d{grid-area: d;}
+        div.area-e{grid-area: e;}
+    </style>
+</head>
+<body>
+    <main>
+        <div class="area-a"><p>A</p></div>
+        <div class="area-b"><p>B</p></div>
+        <div class="area-c"><p>C</p></div>
+        <div class="area-d"><p>D</p></div>
+        <div class="area-e"><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis suscipit adipisci neque cumque facere unde temporibus nisi impedit, cum iusto nostrum delectus aliquam libero fugit aut quibusdam, eum sit distinctio eveniet debitis quo at. Nemo libero, tenetur dicta distinctio vitae similique beatae dolorum doloremque necessitatibus consectetur aperiam provident delectus nam veritatis ad odio placeat suscipit asperiores laboriosam iusto hic. Omnis facilis labore et! Cupiditate impedit aut ducimus necessitatibus quidem? Odit veritatis, suscipit similique deleniti enim quaerat praesentium inventore, quia, quis impedit nulla blanditiis quas commodi accusantium dolores? At soluta alias impedit molestiae dolore quidem tenetur? Reiciendis nesciunt a nulla consectetur! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea, voluptatibus corporis, et quae illo ipsam ullam, consectetur a labore soluta pariatur ducimus. Aspernatur voluptatibus recusandae neque doloremque cum vero ea eius vitae dignissimos tenetur, iste, magnam aliquid corrupti sapiente! Quas quibusdam et deleniti ex minima, voluptate vero ipsam quod voluptatem!</p></div>
+    </main>
+</body>
+</html>
