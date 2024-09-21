@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ferreira Imobiliária</title>
+    <link rel="stylesheet" href="principal.css">
+    <link rel="stylesheet" href="hf.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1><a href="index.html"><img src="Imagens/logo_nova.png" alt="Logo do site - escrito 'Ferreira Imobiliária'"></a></h1> <!-- por ser logo, deve estar na tag de h1-->
+        <button id="botao_menu"><figure><img src="Imagens/menu.png" alt="Ícone de menu"></figure></button>
+        <nav id="menu_sanduiche">
+            <button id="botao_fechar"><figure><img src="Imagens/fechar.png" alt="Ícone de X"></figure></button>
+            <ul>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="venda.html">Venda</a></li>
+                <li><a href="locacao.html">Locação</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+        <nav class="menu">
+            <ul>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="venda.html">Venda</a></li>
+                <li><a href="locacao.html">Locação</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+            <nav class="login_cd">
+                <ul>
+                    <li><a href="login.html">Login</a></li>
+                    <li class="cadastro"><a href="index.html">Cadastro</a></li>
+                </ul>
+            </nav>
+    </header>
+    <main id="index">
+        <div id="top">
+            <h1><b>Bem vindo à nossa página!</b></h1>
+            <div id="paragrafo"></div>
+                <p>Seja bem-vindo ao nosso site imobiliário!<br>
+                Na Ferreira Imobiliária você pode achar diversas opções de imóveis e torná-los seu novo lar. Além disso, aqui você pode também usar nosso serviço de corretagem para anunciar seus imóveis.</p>
+                <p>Aproveite nossa variedade de imóveis disponíveis presentes por todo o Brasil para compra e aluguel, garanta o melhor para sua família! Garantimos conforto e praticidade em seu novo lar!</p>
+            </div>
+        </div>
+        <div id="center">
+            <form action="">
+                <input type="image" src="Imagens/lupa.png" alt="Ícone de uma lupa">
+                <input type="search" placeholder="Buscar">
+            </form>
+            <div id="cont-modal">
+                <div id="modal">
+                <picture class="img1index">
+                    <source srcset="Imagens/img1.png" media="(min-width: 501px)">
+                    <img src="Imagens/img1_319.png" alt="Imagem de uma casa">
+                </picture>
+                <picture class="img2index">
+                    <source srcset="Imagens/img2.png" media="(min-width: 501px)">
+                    <img src="Imagens/img2_319.png" alt="Imagem de outra casa">
+                </picture>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer id="index_footer">
+        <nav>
+            <ul>
+                <li><a href=""><img src="Imagens/facebook.png" alt="Logo do facebook"></a></li>
+                <li><a href=""><img src="Imagens/twitter.png" alt="Logo do Twitter"></a></li>
+                <li><a href=""><img src="Imagens/wpp.png" alt="Logo do WhatsApp"></a></li>
+                <li><a href=""><img src="Imagens/insta.png" alt="Logo do Instagram"></a></li>
+                <li><a href=""><img src="Imagens/yt.png" alt="Logo do YouTube"></a></li>
+            </ul>
+        </nav>
+    </footer>
+    <script>
+        let MenuAberto = false;
+
+        document.getElementById('botao_menu').addEventListener('click', function () {
+            document.getElementById('menu_sanduiche').style.display = 'block';
+            MenuAberto = true;
+        });
+
+        document.getElementById('botao_fechar').addEventListener('click', function () {
+            document.getElementById('menu_sanduiche').style.display = 'none';
+            MenuAberto = false;
+        });
+
+        window.addEventListener('resize', function () {
+            if (window.innerWidth > 500 && MenuAberto) {
+                document.getElementById('menu_sanduiche').style.display = 'none';
+                MenuAberto = false; 
+            }
+        });
+    </script>
+</body>
+</html>
